@@ -1,0 +1,67 @@
+.footer {
+  background-color: var(--color-footer);
+  color: var(--color-white);
+  padding-block: 72px;
+}
+
+/* Десктоп: логотип + три колонки. */
+.inner {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 1.2fr 1.2fr;
+  column-gap: 32px;
+  row-gap: 40px;
+  align-items: start;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.brand img {
+  height: 97px;
+  width: auto;
+}
+
+.title {
+  margin-bottom: 16px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.list {
+  display: grid;
+  gap: 16px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.list a {
+  transition: color 0.2s;
+}
+
+.list a:hover {
+  color: var(--color-accent);
+}
+
+/* Планшеты: две колонки. */
+@media (max-width: 1023px) {
+  .footer {
+    padding-block: 48px;
+  }
+
+  .inner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Телефоны: одна колонка. */
+@media (max-width: 575px) {
+  .inner {
+    grid-template-columns: 1fr;
+  }
+}

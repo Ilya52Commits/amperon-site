@@ -1,0 +1,86 @@
+/* ============ Hero ============ */
+.hero {
+  background-image:
+    linear-gradient(rgb(0 0 0 / 34%), rgb(0 0 0 / 34%)),
+    url('../assets/main-pages-images/background-img.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 90vh;
+  display: flex;
+  align-items: flex-start;
+}
+
+.heroTitle {
+  font-size: 40px;
+  color: var(--color-white);
+}
+
+.accent {
+  color: var(--color-accent); /* оранжевые слова в заголовке */
+}
+
+.heroText {
+  max-width: 560px; /* вместо <br/>: строки переносятся сами */
+  margin: 16px 0 24px;
+  color: var(--color-white);
+}
+
+.heroButton {
+  width: 220px;
+  height: 51px;
+  font-weight: 700;
+  background-color: var(--color-accent);
+  border: none;
+  border-radius: 10px;
+}
+
+/* ============ О нас ============ */
+.about {
+  padding-block: 40px;
+}
+
+.aboutInner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 32px;
+}
+
+.aboutCard {
+  width: 100%;          /* на узких экранах не вылезает за колонку */
+  max-width: 405px;     /* на широких не растягивается больше макета */
+  min-height: 462px;
+  padding: 25px 44px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+}
+
+.aboutTitle {
+  font-size: 40px;
+}
+
+.aboutText {
+  margin-top: 20px;
+  font-weight: 500;
+  line-height: 1.5;
+  max-width: 300px;
+}
+
+.aboutLogo {
+  justify-self: center;
+  width: 100%;
+}
+
+/* ============ Адаптив ============ */
+
+@media (max-width: 767px) {
+  .heroTitle {
+    font-size: 28px;
+  }
+
+  .aboutInner {
+    grid-template-columns: 1fr; /* карточка и лого друг под другом */
+  }
+}

@@ -1,0 +1,111 @@
+/* ------------------------------------------------------------------
+   Глобальные стили. Подключаются один раз в main.tsx.
+   Стили конкретных компонентов лежат рядом с ними (*.module.css).
+------------------------------------------------------------------- */
+
+/* CSS-переменные: один источник правды для цветов и размеров.
+   Меняешь значение здесь, и оно меняется по всему сайту. */
+:root {
+  --color-accent: #fc9401; /* оранжевый: кнопки, акценты */
+  --color-text: #1d3856; /* основной цвет текста и заголовков */
+  --color-footer: #12232d; /* фон подвала */
+  --color-bg: #f8f8f8; /* фон страницы */
+  --color-white: #ffffff;
+  --color-border: #e4e4e4;
+
+  --font-main: 'Montserrat', Arial, sans-serif;
+
+  --header-height: 76px;
+  --container-width: 1030px; /* ширина основного контента по макету */
+  --gutter: 16px; /* боковой отступ на узких экранах */
+}
+
+/* Сброс браузерных отступов. box-sizing: border-box означает, что padding и
+   border входят в заданную ширину, считать размеры проще. */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-main);
+  font-size: 16px;
+  line-height: 1.4;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+/* Страница всегда не ниже экрана: подвал прижимается к низу,
+   даже если контента мало (main растягивается через flex: 1). */
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+h1 {
+  max-width: 700px;
+  font-size: 40px;
+  color: var(--color-white);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Общий контейнер: центрирует контент и ограничивает его ширину. */
+.container {
+  width: 100%;
+  max-width: calc(var(--container-width) + var(--gutter) * 2);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+/* Видно только скринридерам (например, подпись у иконок без текста). */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* Якоря (#about и т. п.) не прячутся под липкой шапкой. */
+[id] {
+  scroll-margin-top: calc(var(--header-height) + 16px);
+}
+
