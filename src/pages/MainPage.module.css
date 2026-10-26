@@ -42,6 +42,7 @@
 
 .aboutInner {
   display: grid;
+  margin-top: 20px;
   grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: 32px;
@@ -73,14 +74,52 @@
   width: 100%;
 }
 
+/* ============ Основные направления ============ */
+.services {
+  padding-block: 40px;
+  text-align: center;
+}
+
+.servicesTitle {
+  margin-bottom: 32px;
+}
+
+.serviceList {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 27px;
+}
+
+.moreWrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.moreButton {
+  padding: 10px 24px;
+  font-weight: 700;
+  color: var(--color-accent);
+  background: none;
+  border: 3px solid var(--color-accent);
+  border-radius: 10px;
+}
+
 /* ============ Адаптив ============ */
 
 @media (max-width: 767px) {
   .heroTitle {
     font-size: 28px;
   }
-
+  
   .aboutInner {
     grid-template-columns: 1fr; /* карточка и лого друг под другом */
   }
 }
+  @media (max-width: 899px) {
+    .serviceList { grid-template-columns: repeat(2, 1fr); }
+  }
+  
+  @media (max-width: 479px) {
+    .serviceList { grid-template-columns: 1fr; }
+  }

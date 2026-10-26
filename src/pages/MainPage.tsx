@@ -2,10 +2,19 @@ import { Link } from 'react-router-dom';
 import { services } from '@/data/services';
 import styles from './MainPage.module.css';
 import ButtomLogo from '@/assets/main-logos/Bottom-logo-black.png'
+import { useState } from 'react';
+import { ServiceCard } from '@/components/ServiceCard/ServiceCard';
+
+const INITIAL_COUNT = 8;   // два ряда по 4, как в макете
 
 // Временная заглушка: проверяем, что роутинг работает.
 // Дальше сюда добавим секции: Hero, О нас, Направления, Примеры, Заявка.
 export function MainPage() {
+  const [showAll, setShowAll] = useState(false);
+
+  const visibleServices = showAll ? services : services.slice(0, INITIAL_COUNT);
+  const hasMore = services.length > INITIAL_COUNT;
+
   return (
     <>
       <div className={styles.hero}> 
@@ -42,6 +51,30 @@ export function MainPage() {
           </div>
         </div>
       </div>
+
+      <section id="services" className={styles.services}>
+        <div className="container">
+          <h2 className={styles.servicesTitle}>Основные направления</h2>
+
+          <div className={styles.serviceList}>
+            {visibleServices.map((service) => (
+              <ServiceCard key={service.slug} service={service} />
+            ))}
+          </div>
+
+          {hasMore && !showAll && (
+            <div className={styles.moreWrap}>
+              <button
+                type="button"
+                className={styles.moreButton}
+                onClick={() => setShowAll(true)}
+              >
+                Показать больше
+              </button>
+            </div>
+          )}
+        </div>
+      </section>
     </>
   );
 }
