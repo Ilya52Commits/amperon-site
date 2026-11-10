@@ -1,9 +1,10 @@
-import { Link } from 'react-router-dom';
 import { services } from '@/data/services';
 import styles from './MainPage.module.css';
 import ButtomLogo from '@/assets/main-logos/Bottom-logo-black.png'
 import { useState } from 'react';
 import { ServiceCard } from '@/components/ServiceCard/ServiceCard';
+import { Examples } from '@/components/Examples/Examples';
+import { RequestForm } from '@/components/RequestForm/RequestForm';
 
 const INITIAL_COUNT = 8;   // два ряда по 4, как в макете
 
@@ -75,6 +76,9 @@ export function MainPage() {
           )}
         </div>
       </section>
+
+      <Examples />
+      <RequestForm />
     </>
   );
 }

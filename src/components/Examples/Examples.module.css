@@ -1,0 +1,76 @@
+.examples {
+  max-width: var(--container-width);
+  margin: 40px auto;
+  padding: 24px 16px 56px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  text-align: center;
+}
+
+.title {
+  margin-bottom: 32px;
+}
+
+/* стрелка | окно с карточками | стрелка */
+.slider {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 16px;
+}
+
+/* «окно»: обрезает карточки, не поместившиеся в видимую область */
+.viewport {
+  min-width: 0;
+  overflow: hidden;
+}
+
+.track {
+  --visible: 3; /* сколько карточек видно одновременно */
+  --gap: 32px; /* промежуток между карточками */
+
+  display: flex;
+  gap: var(--gap);
+  /* сдвиг на --index шагов; шаг = ширина карточки + промежуток */
+  transform: translateX(
+    calc(var(--index) * (100% + var(--gap)) / var(--visible) * -1)
+  );
+  transition: transform 0.4s ease;
+}
+
+/* для мгновенного «невидимого» перепрыгивания */
+.noAnimation {
+  transition: none;
+}
+
+.item {
+  /* ширина карточки: (ширина окна − все промежутки) / число видимых */
+  flex: 0 0 calc((100% - (var(--visible) - 1) * var(--gap)) / var(--visible));
+}
+
+.arrow {
+  padding: 8px;
+  color: var(--color-text);
+  background: none;
+  border: none;
+  transition: color 0.2s;
+}
+
+.arrow:hover {
+  color: var(--color-accent);
+}
+
+/* ---------- Адаптив ---------- */
+@media (max-width: 767px) {
+  .track {
+    --visible: 2;
+  }
+}
+
+@media (max-width: 479px) {
+  .track {
+    --visible: 1;
+    --gap: 16px;
+  }
+}
