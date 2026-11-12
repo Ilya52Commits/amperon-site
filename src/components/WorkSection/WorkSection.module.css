@@ -1,0 +1,46 @@
+.section {
+  padding-block: 24px;
+}
+
+.title {
+  margin-bottom: 16px;
+  font-size: 32px;
+}
+
+/* белая панель, внутри которой сетка карточек */
+.panel {
+  padding: 32px 48px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+}
+
+.grid {
+  --cols: 3;     /* сколько карточек в ряду */
+  --gap: 32px;   /* промежуток между карточками по горизонтали */
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;   /* неполная строка встаёт по центру */
+  gap: 24px var(--gap);      /* вертикальный и горизонтальный промежутки */
+}
+/* ширина карточки: (ширина ряда − все промежутки) / число колонок */
+.grid > * {
+  flex: 0 0 calc((100% - (var(--cols) - 1) * var(--gap)) / var(--cols));
+}
+
+.more {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+@media (max-width: 899px) {
+  .panel { padding: 24px; }
+  .grid { --cols: 2; }
+}
+
+@media (max-width: 479px) {
+  .panel { padding: 16px; }
+  .grid { --cols: 1; }
+}
