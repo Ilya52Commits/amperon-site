@@ -7,18 +7,27 @@ import { Header } from '@/components/Header/Header';
 // Этот эффект возвращает его наверх, а если в адресе есть якорь (/#about),
 // прокручивает к элементу с таким id.
 function useScrollOnNavigation() {
-  const { pathname, hash } = useLocation();
+  const { pathname, hash, key } = useLocation();
 
   useEffect(() => {
+    // Если пользователь отключил анимации в системе, прыгаем без плавности.
+    const prefersReducedMotion = window.matchMedia(
+      '(prefers-reduced-motion: reduce)'
+    ).matches;
+
     if (hash) {
       const target = document.getElementById(hash.slice(1));
       if (target) {
-        target.scrollIntoView();
+        target.scrollIntoView({
+          behavior: prefersReducedMotion ? 'auto' : 'smooth',
+        });
         return;
       }
     }
-    window.scrollTo(0, 0);
-  }, [pathname, hash]);
+
+    // Переход на другую страницу: сразу наверх, без анимации.
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }, [pathname, hash, key]);
 }
 
 export function Layout() {

@@ -12,6 +12,7 @@
   aspect-ratio: 16 / 10;
   object-fit: cover;
   background-color: #c0c0c0;
+  filter: brightness(0.7);   /* ← затемнение на 30% */
 }
 
 .title {

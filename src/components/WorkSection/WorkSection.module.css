@@ -5,6 +5,7 @@
 .title {
   margin-bottom: 16px;
   font-size: 32px;
+  text-align: center;
 }
 
 /* белая панель, внутри которой сетка карточек */
