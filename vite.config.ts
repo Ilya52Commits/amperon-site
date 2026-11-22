@@ -9,4 +9,7 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'), // <-- Наш алиас
     },
   },
+  server: {
+    proxy: { '/api': 'http://localhost:3000' },
+  },
 })

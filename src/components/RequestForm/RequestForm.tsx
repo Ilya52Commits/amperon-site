@@ -35,11 +35,15 @@ function validate(values: Values): Errors {
   return errors;
 }
 
-// ЗАГЛУШКА: сюда позже добавим настоящую отправку (fetch на сервер или сервис).
-// Пока просто ждём 0,6 с и пишем данные в консоль.
+// 2. Меняем функцию sendRequest
 async function sendRequest(values: Values): Promise<void> {
-  await new Promise((resolve) => setTimeout(resolve, 600));
-  console.log('Заявка (заглушка):', values);
+  // Правильный путь: слэш в начале и точка перед netlify
+  const response = await fetch('/api/send-email', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(values),
+  });
+  if (!response.ok) throw new Error('Ошибка');
 }
 
 export function RequestForm() {
@@ -55,8 +59,8 @@ export function RequestForm() {
     setStatus('idle');
   };
 
-  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault(); // без этого браузер перезагрузит страницу
+    const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
 
     const newErrors = validate(values);
     setErrors(newErrors);
@@ -64,10 +68,11 @@ export function RequestForm() {
 
     setStatus('sending');
     try {
-      await sendRequest(values);
+      await sendRequest(values); // <-- Вызовется реальная отправка
       setValues(emptyValues);
       setStatus('success');
-    } catch {
+    } catch (error) {
+      console.error('Ошибка отправки:', error); // Для отладки в консоли
       setStatus('error');
     }
   };
