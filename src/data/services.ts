@@ -11,6 +11,18 @@ import groundingIcon from '@/assets/services-logs/grounding_icon.svg';
 import powerSupplyIcon from '@/assets/services-logs/power_supply_icon.svg';
 import videoSurveillanceIcon from '@/assets/services-logs/video_surveillance_icon.svg';
 import warningSystemIcon from '@/assets/services-logs/warning_system_icon.svg';
+import accessControlIcon from '@/assets/services-logs/access_control_icon.svg';
+import securityAlarmSystemIcon from '@/assets/services-logs/security_alarm_system_icon.svg';
+import structuredCablingSystemIcon from '@/assets/services-logs/structured_cabling_system_icon.svg';
+import computerNetworkIcon from '@/assets/services-logs/computer_networks_icon.svg';
+import opticalNetworksIcon from '@/assets/services-logs/optical_networks_icon.svg';
+import interconSystemIcon from '@/assets/services-logs/intercom_systems_icon.svg';
+import televisionSystemIcon from '@/assets/services-logs/television_systems_icon.svg';
+import automationAndDispatchingIcon from '@/assets/services-logs/automation_and_dispatching_icon.svg';
+import comprehensiveSystemInstallationIcon from '@/assets/services-logs/comprehensive_system_installation_icon.svg';
+import commissioningWorkIcon from '@/assets/services-logs/commissioning_work_icon.svg';
+import executiveDocumentationIcon from '@/assets/services-logs/executive_documentation_icon.svg';
+import maintenanceIcon from '@/assets/services-logs/maintenance_and_modernization_icon.svg';
 
 /* Изображения на страницах услуг */
 import powerSystemsHeroImage from '@/assets/services-images/power-systems-main-img.png';
@@ -283,7 +295,7 @@ export const services: Service[] = [
   { 
     slug: 'systems-control-and-access-management', 
     title: 'Система контроля и управления доступом (СКУД)',
-    icon: "",
+    icon: accessControlIcon,
     description:
       'Организация контролируемого доступа сотрудников, посетителей и транспорта.',
     sections: [
@@ -316,7 +328,7 @@ export const services: Service[] = [
   { 
     slug: 'warning-system',
     title: 'Охранная сигнализация', 
-    icon: 'warningSystemIcon',
+    icon: securityAlarmSystemIcon,
     description:
       'Системы обнаружения несанкционированного проникновения и передачи тревожных сообщений.', 
     sections: [
@@ -339,7 +351,7 @@ export const services: Service[] = [
   { 
     slug: 'structured-cabling-system',
     title: 'Структурированная кабельная система (СКС)',
-    icon: 'cableSystemIcon',
+    icon: structuredCablingSystemIcon,
     description:
       'Создание единой кабельной инфраструктуры для передачи данных и подключения информационного оборудования.',
     sections: [
@@ -370,8 +382,8 @@ export const services: Service[] = [
 
   { 
     slug: 'local-area-networks', 
-    title: 'Локальные вычислительные сети и серверная инфраструктура', 
-    icon: 'groundingIcon',
+    title: 'Локальные вычислительные сети', 
+    icon: computerNetworkIcon,
     description:
       'Монтаж инфраструктуры для офисных, производственных, складских и коммерческих объектов.',
     sections: [
@@ -395,7 +407,7 @@ export const services: Service[] = [
   {
     slug: 'optical-networks', 
     title: 'Оптические сети (ВОЛС)', 
-    icon: 'powerSupplyIcon',
+    icon: opticalNetworksIcon,
     description:
       'Монтаж и обслуживание оптической кабельной инфраструктуры.',
     sections: [
@@ -418,7 +430,7 @@ export const services: Service[] = [
   { 
     slug: 'intercom-and-communication-systems', 
     title: 'Домофония и переговорные системы', 
-    icon: 'alarmSystemIcon',
+    icon: interconSystemIcon,
     description:
       'Монтаж систем связи и контроля доступа для жилых и коммерческих объектов.',
     sections: [
@@ -441,7 +453,7 @@ export const services: Service[] = [
   {
     slug: 'tv-and-antenna-systems',
     title: 'Телевизионные и антенные системы',
-    icon: 'cableSystemIcon',
+    icon: televisionSystemIcon,
     description:
       'Монтаж распределительных сетей телевидения и антенных систем.',
     sections: [
@@ -461,7 +473,7 @@ export const services: Service[] = [
 {
   slug: 'automation-and-dispatching',
   title: 'Автоматизация и диспетчеризация',
-   icon: 'automationIcon',
+   icon: automationAndDispatchingIcon,
   description:
     'Монтаж и интеграция систем управления инженерным оборудованием объекта.',
   sections: [
@@ -484,7 +496,7 @@ export const services: Service[] = [
 {
   slug: 'complex-engineering-installation',
   title: 'Комплексный монтаж инженерных систем',
-   icon: 'complexInstallationIcon',
+   icon: comprehensiveSystemInstallationIcon ,
   description:
     'ООО «Амперон» может выполнять комплекс инженерных работ в рамках одного договора и с единым ответственным подрядчиком.',
   sections: [
@@ -525,7 +537,7 @@ export const services: Service[] = [
 {
   slug: 'commissioning',
   title: 'Пусконаладочные работы',
-   icon: 'commissioningIcon',
+   icon: commissioningWorkIcon,
   description:
     'Проверка, настройка и ввод смонтированных систем в эксплуатацию.',
   sections: [
@@ -556,7 +568,7 @@ export const services: Service[] = [
 {
   slug: 'as-built-documentation',
   title: 'Исполнительная документация',
-   icon: 'documentationIcon',
+  icon:  executiveDocumentationIcon,
   description:
     'Подготовка документации по результатам выполненных монтажных и пусконаладочных работ.',
   sections: [
@@ -580,7 +592,7 @@ export const services: Service[] = [
 {
   slug: 'maintenance-and-modernization',
   title: 'Техническое обслуживание и модернизация',
-   icon: 'maintenanceIcon',
+   icon: maintenanceIcon,
   description:
     'Поддержание инженерных систем в рабочем состоянии, устранение неисправностей и модернизация существующей инфраструктуры.',
   sections: [
