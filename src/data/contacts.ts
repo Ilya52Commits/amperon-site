@@ -4,5 +4,5 @@ export const contacts = {
   phoneHref: 'tel:+79170457172', // как передаём в ссылку «позвонить»
   telegram: 'https://t.me/',
   max: 'https://max.ru/',
-  address: 'Адрес',
+  email: 'puhovdima2019@gmail.com',
 };

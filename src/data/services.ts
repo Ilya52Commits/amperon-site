@@ -1,8 +1,3 @@
-// Список направлений. По нему строятся карточки на главной, колонка «Услуги»
-// в подвале и страница услуги (/services/:slug). Данные вынесены отдельно,
-// чтобы менять тексты, не трогая вёрстку.
-
-/* Иконки услуг */
 import alarmSystemIcon from '@/assets/services-logs/alarm_system_icon.svg';
 import cableSystemIcon from '@/assets/services-logs/cable_system_icon.svg';
 import electricalSystemIcon from '@/assets/services-logs/electrical_systems_icon.svg';
@@ -41,12 +36,13 @@ import powerSystemsImage2_5 from '@/assets/services-images/power-systems-img2.5.
 import powerSystemsImage2_6 from '@/assets/services-images/power-systems-img2.6.png';
 
 export interface Service {
-  slug: string; // кусок адреса: /services/power-systems
+  slug: string; 
   title: string;
-  icon: string;   // путь к иконке; ? значит «может отсутствовать»
+  icon: string;   
   description?: string;
   heroImage?: string;
   sections?: ServiceSection[];
+  isHidden?: boolean; 
 }
 
 export interface ServiceWork {
@@ -64,6 +60,7 @@ export const services: Service[] = [
     slug: 'power-systems',
     title: 'Силовые электросистемы и электроснабжение',
     icon: electricalSystemIcon,
+    isHidden: false, 
     heroImage: powerSystemsHeroImage,
     description:
       'Полный комплекс электромонтажных работ на объектах различного назначения — от коммерческих помещений до производственных объектов.',

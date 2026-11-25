@@ -19,9 +19,9 @@ export function Footer() {
             <li>
               <Link to="/#services">Услуги</Link>
             </li>
-            <li>
+            {/* <li>
               <Link to="/#examples">Примеры работ</Link>
-            </li>
+            </li> */}
           </ul>
         </nav>
 
@@ -31,7 +31,8 @@ export function Footer() {
             <li>
               <a href={contacts.phoneHref}>{contacts.phone}</a>
             </li>
-            <li>{contacts.address}</li>
+            {/* <li>{contacts.address}</li> */}
+            <li>{contacts.email} </li>
           </ul>
         </div>
       </div>

@@ -11,7 +11,7 @@ import styles from './Header.module.css';
 const navItems = [
   { label: 'О нас', hash: '#about' },
   { label: 'Услуги', hash: '#services' },
-  { label: 'Примеры', hash: '#examples' },
+  // { label: 'Примеры', hash: '#examples' },
 ];
 
 export function Header() {

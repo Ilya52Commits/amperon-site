@@ -3,8 +3,9 @@ import styles from './MainPage.module.css';
 import ButtomLogo from '@/assets/main-logos/Bottom-logo-black.png'
 import { useState } from 'react';
 import { ServiceCard } from '@/components/ServiceCard/ServiceCard';
-import { Examples } from '@/components/Examples/Examples';
-import { RequestForm } from '@/components/RequestForm/RequestForm';
+/*import { Examples } from '@/components/Examples/Examples';*/
+/*import { RequestForm } from '@/components/RequestForm/RequestForm';*/
+import { Contacts } from '@/components/Contacts/Contacts';
 
 const INITIAL_COUNT = 8;   // два ряда по 4, как в макете
 
@@ -13,8 +14,21 @@ const INITIAL_COUNT = 8;   // два ряда по 4, как в макете
 export function MainPage() {
   const [showAll, setShowAll] = useState(false);
 
-  const visibleServices = showAll ? services : services.slice(0, INITIAL_COUNT);
-  const hasMore = services.length > INITIAL_COUNT;
+  // 1. Сначала фильтруем: берем только те, у которых нет isHidden
+  const activeServices = services.filter((service) => !service.isHidden);
+
+  // 2. Теперь применяем логику "показать больше" уже к отфильтрованному массиву
+  const visibleServices = showAll ? activeServices : activeServices.slice(0, INITIAL_COUNT);
+  const hasMore = activeServices.length > INITIAL_COUNT;
+
+  const scrollToContacts = () => {
+    // Находим элемент по id="contacts"
+    const contactsSection = document.getElementById('contacts');
+    if (contactsSection) {
+      // Вызываем плавную прокрутку
+      contactsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
 
   return (
     <>
@@ -31,7 +45,12 @@ export function MainPage() {
             документации.
           </p>
 
-          <button className={styles.heroButton}>Оставить заявку</button>
+          {/* <button className={styles.heroButton}>Оставить заявку</button> */}
+          <button className={styles.heroButton}
+           onClick={scrollToContacts}
+          >
+            Связаться с нами
+          </button>
         </div>
       </div>
 
@@ -77,8 +96,9 @@ export function MainPage() {
         </div>
       </section>
 
-      <Examples />
-      <RequestForm />
+      {/* <Examples /> */}
+      {/* <RequestForm /> */}
+      <Contacts />
     </>
   );
 }
