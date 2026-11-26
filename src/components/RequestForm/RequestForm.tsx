@@ -102,10 +102,10 @@ export function RequestForm() {
               </a>
             </li>
             <li>
-              <a href={contacts.address}>
+              {/* <a href={contacts.address}>
                 <img src={AdressIcon} alt="Адрес" />
                 {contacts.address}
-              </a>
+              </a> */}
             </li>
           </ul>
 

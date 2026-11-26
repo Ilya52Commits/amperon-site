@@ -1,3 +1,4 @@
+//#region Иконки услуг
 import alarmSystemIcon from '@/assets/services-logs/alarm_system_icon.svg';
 import cableSystemIcon from '@/assets/services-logs/cable_system_icon.svg';
 import electricalSystemIcon from '@/assets/services-logs/electrical_systems_icon.svg';
@@ -18,22 +19,69 @@ import comprehensiveSystemInstallationIcon from '@/assets/services-logs/comprehe
 import commissioningWorkIcon from '@/assets/services-logs/commissioning_work_icon.svg';
 import executiveDocumentationIcon from '@/assets/services-logs/executive_documentation_icon.svg';
 import maintenanceIcon from '@/assets/services-logs/maintenance_and_modernization_icon.svg';
+//#endregion
 
-/* Изображения на страницах услуг */
-import powerSystemsHeroImage from '@/assets/services-images/power-systems-main-img.png';
-import powerSystemsImage1 from '@/assets/services-images/power-systems-img1.png';
-import powerSystemsImage2 from '@/assets/services-images/power-systems-img2.png';
-import powerSystemsImage3 from '@/assets/services-images/power-systems-img3.png';
-import powerSystemsImage4 from '@/assets/services-images/power-systems-img4.png';
-import powerSystemsImage5 from '@/assets/services-images/power-systems-img5.png';
-import powerSystemsImage6 from '@/assets/services-images/power-systems-img6.png';
+/* Силовые электросистемы и электроснабжение */
+import powerSystemsHeroImage from '@/assets/services-images/power-systems/power-systems-main-img.png';
+import powerSystemsImage1 from '@/assets/services-images/power-systems/power-systems-img1.png';
+import powerSystemsImage2 from '@/assets/services-images/power-systems/power-systems-img2.png';
+import powerSystemsImage3 from '@/assets/services-images/power-systems/power-systems-img3.png';
+import powerSystemsImage4 from '@/assets/services-images/power-systems/power-systems-img4.png';
+import powerSystemsImage5 from '@/assets/services-images/power-systems/power-systems-img5.png';
+import powerSystemsImage6 from '@/assets/services-images/power-systems/power-systems-img6.png';
+import powerSystemsImage7 from '@/assets/services-images/power-systems/power-systems-img7.png'
+import powerSystemsImage8 from '@/assets/services-images/power-systems/power-systems-img8.png'
+import powerSystemsImage9 from '@/assets/services-images/power-systems/power-systems-img9.png'
+import powerSystemsImage10 from '@/assets/services-images/power-systems/power-systems-img10.png'
 
-import powerSystemsImage2_1 from '@/assets/services-images/power-systems-img2.1.png';
-import powerSystemsImage2_2 from '@/assets/services-images/power-systems-img2.2.png';
-import powerSystemsImage2_3 from '@/assets/services-images/power-systems-img2.3.png';
-import powerSystemsImage2_4 from '@/assets/services-images/power-systems-img2.4.png';
-import powerSystemsImage2_5 from '@/assets/services-images/power-systems-img2.5.png';
-import powerSystemsImage2_6 from '@/assets/services-images/power-systems-img2.6.png';
+import powerSystemsImage2_1 from '@/assets/services-images/power-systems/power-systems-img2.1.png';
+import powerSystemsImage2_2 from '@/assets/services-images/power-systems/power-systems-img2.2.png';
+import powerSystemsImage2_3 from '@/assets/services-images/power-systems/power-systems-img2.3.png';
+import powerSystemsImage2_4 from '@/assets/services-images/power-systems/power-systems-img2.4.png';
+import powerSystemsImage2_5 from '@/assets/services-images/power-systems/power-systems-img2.5.png';
+import powerSystemsImage2_6 from '@/assets/services-images/power-systems/power-systems-img2.6.png';
+import powerSystemsImage2_7 from '@/assets/services-images/power-systems/power-systems-img2.7.png';
+import powerSystemsImage2_8 from '@/assets/services-images/power-systems/power-systems-img2.8.png';
+
+/* Система освещения */
+import lightingHeroImage from '@/assets/services-images/lighting-systems/lighting-systems-main-img.png';
+import lightingSystemsImage1 from '@/assets/services-images/lighting-systems/lighting-systems-img1.png';
+import lightingSystemsImage2 from '@/assets/services-images/lighting-systems/lighting-systems-img2.png';
+import lightingSystemsImage3 from '@/assets/services-images/lighting-systems/lighting-systems-img3.png';
+import lightingSystemsImage4 from '@/assets/services-images/lighting-systems/lighting-systems-img4.png';
+import lightingSystemsImage5 from '@/assets/services-images/lighting-systems/lighting-systems-img5.png';
+
+import lightingSystemsImage2_1 from '@/assets/services-images/lighting-systems/lighting-systems-img2_1.png';
+import lightingSystemsImage2_2 from '@/assets/services-images/lighting-systems/lighting-systems-img2_2.png';
+import lightingSystemsImage2_3 from '@/assets/services-images/lighting-systems/lighting-systems-img2_3.png';
+import lightingSystemsImage2_4 from '@/assets/services-images/lighting-systems/lighting-systems-img2_4.png';
+
+/* Кабельные системы и кабельные трассы */
+import cableSystemsHeroImage from '@/assets/services-images/cable-systems/cable-systems-main-img.png';
+import cableSystemsImage1 from '@/assets/services-images/cable-systems/cable-systems-img1.png';
+import cableSystemsImage2 from '@/assets/services-images/cable-systems/cable-systems-img2.png';
+import cableSystemsImage3 from '@/assets/services-images/cable-systems/cable-systems-img3.png';
+import cableSystemsImage4 from '@/assets/services-images/cable-systems/cable-systems-img4.png';
+import cableSystemsImage5 from '@/assets/services-images/cable-systems/cable-systems-img5.png';
+import cableSystemsImage6 from '@/assets/services-images/cable-systems/cable-systems-img6.png';
+
+import cableSystemsImage2_1 from '@/assets/services-images/cable-systems/cable-systems-img2_1.png';
+import cableSystemsImage2_2 from '@/assets/services-images/cable-systems/cable-systems-img2_2.png';
+import cableSystemsImage2_3 from '@/assets/services-images/cable-systems/cable-systems-img2_3.png';
+import cableSystemsImage2_4 from '@/assets/services-images/cable-systems/cable-systems-img2_4.png';
+import cableSystemsImage2_5 from '@/assets/services-images/cable-systems/cable-systems-img2_5.png';
+import cableSystemsImage2_6 from '@/assets/services-images/cable-systems/cable-systems-img2_6.png';
+
+/* Заземление и молниезащита */
+import groundingHeroImage from '@/assets/services-images/grounding-and-lightning-protection/grounding-and-lightning-protection-main-img.png';
+import groundingImage1 from '@/assets/services-images/grounding-and-lightning-protection/grounding-and-lightning-protection-img1.png';
+import groundingImage2 from '@/assets/services-images/grounding-and-lightning-protection/grounding-and-lightning-protection-img2.png';
+import groundingImage3 from '@/assets/services-images/grounding-and-lightning-protection/grounding-and-lightning-protection-img3.png';
+import groundingImage4 from '@/assets/services-images/grounding-and-lightning-protection/grounding-and-lightning-protection-img4.png';
+import groundingImage5 from '@/assets/services-images/grounding-and-lightning-protection/grounding-and-lightning-protection-img5.png';
+import groundingImage6 from '@/assets/services-images/grounding-and-lightning-protection/grounding-and-lightning-protection-img6.png';
+import groundingImage7 from '@/assets/services-images/grounding-and-lightning-protection/grounding-and-lightning-protection-img7.png';
+import groundingImage8 from '@/assets/services-images/grounding-and-lightning-protection/grounding-and-lightning-protection-img8.png';
 
 export interface Service {
   slug: string; 
@@ -74,10 +122,10 @@ export const services: Service[] = [
           { title: 'Монтаж кабельных каналов, труб и гофрированных систем', image: powerSystemsImage4 },
           { title: 'Монтаж распределительных коробок', image: powerSystemsImage5 },
           { title: 'Монтаж розеточных и силовых групп', image: powerSystemsImage6 },
-          { title: 'Подключение электроприёмников' },
-          { title: 'Монтаж и подключение оборудования' },
-          { title: 'Маркировка кабельных линий' },
-          { title: 'Монтаж временного электроснабжения' },
+          { title: 'Подключение электроприёмников', image: powerSystemsImage7 },
+          { title: 'Монтаж и подключение оборудования', image: powerSystemsImage8 },
+          { title: 'Маркировка кабельных линий', image: powerSystemsImage9 },
+          { title: 'Монтаж временного электроснабжения', image: powerSystemsImage10 },
         ],
       },
       {
@@ -89,8 +137,8 @@ export const services: Service[] = [
           { title: 'Сборка и установка щитового оборудования', image: powerSystemsImage2_4 },
           { title: 'Установка автоматических выключателей', image: powerSystemsImage2_5 },
           { title: 'Установка контакторов, реле и коммутационной аппаратуры', image: powerSystemsImage2_6 },
-          { title: 'Подключение кабельных линий' },
-          { title: 'Подключение кабельных линий' },
+          { title: 'Подключение кабельных линий', image: powerSystemsImage2_7 },
+          { title: 'Маркировка, проверка и испытание оборудования', image: powerSystemsImage2_8 },
         ],
       },
     ],
@@ -100,26 +148,27 @@ export const services: Service[] = [
     slug: 'lighting', 
     title: 'Системы освещения', 
     icon: warningSystemIcon,
+    heroImage: lightingHeroImage,
     description:
       'Монтаж внутренних и наружных систем освещения для коммерческих, административных, производственных и других объектов.',
     sections: [
       {
         title: 'Виды освещения',
         works: [
-          { title: 'Рабочее освещение' },
-          { title: 'Аварийное и эвакуационное освещение' },
-          { title: 'Фасадное и архитектурное освещение' },
-          { title: 'Промышленное освещение' },
-          { title: 'Освещение складских, офисных и коммерческих помещений' }
+          { title: 'Рабочее освещение', image: lightingSystemsImage1 },
+          { title: 'Аварийное и эвакуационное освещение', image: lightingSystemsImage2 },
+          { title: 'Фасадное и архитектурное освещение', image: lightingSystemsImage3 },
+          { title: 'Промышленное освещение', image: lightingSystemsImage4 },
+          { title: 'Освещение складских, офисных и коммерческих помещений', image: lightingSystemsImage5 },
         ],
       },
       {
         title: 'Монтаж и подключение',
         works: [
-          { title: 'Монтаж светильников' },
-          { title: 'Монтаж выключателей и датчиков' },
-          { title: 'Прокладка питающих линий' },
-          { title: 'Подключение и настройка систем управления освещением' }
+          { title: 'Монтаж светильников', image: lightingSystemsImage2_1 },
+          { title: 'Монтаж выключателей и датчиков', image: lightingSystemsImage2_2 },
+          { title: 'Прокладка питающих линий', image: lightingSystemsImage2_3 },
+          { title: 'Подключение и настройка систем управления освещением', image: lightingSystemsImage2_4 },
         ],
       },
     ],
@@ -129,29 +178,30 @@ export const services: Service[] = [
     slug: 'cable-systems', 
     title: 'Кабельные системы и кабельные трассы',
     icon: cableSystemIcon,
+    heroImage: cableSystemsHeroImage,
     description:
       'Создание организованной кабельной инфраструктуры с учётом назначения систем и требований проектной документации.',
     sections: [
       {
         title: 'Монтаж трасс',
         works: [
-          { title: 'Кабельные лотки и лестницы' },
-          { title: 'Металлические и пластиковые трассы' },
-          { title: 'Кабельные каналы' },
-          { title: 'Трубы ПВХ, гофрированные и металлические трубы' },
-          { title: 'Закладные конструкции' },
-          { title: 'Проходки через стены и перекрытия' }
+          { title: 'Кабельные лотки и лестницы', image: cableSystemsImage1 },
+          { title: 'Металлические и пластиковые трассы', image: cableSystemsImage2 },
+          { title: 'Кабельные каналы', image: cableSystemsImage3 },
+          { title: 'Трубы ПВХ, гофрированные и металлические трубы', image: cableSystemsImage4 },
+          { title: 'Закладные конструкции', image: cableSystemsImage5 },
+          { title: 'Проходки через стены и перекрытия', image: cableSystemsImage6 }
         ],
       },
       {
         title: 'Прокладка кабелей',
         works: [
-          { title: 'Силовые кабели' },
-          { title: 'Контрольные кабели' },
-          { title: 'Информационные кабели' },
-          { title: 'Кабели пожарных систем' },
-          { title: 'Оптические линии' },
-          { title: 'Маркировка и организация кабельного хозяйства' }
+          { title: 'Силовые кабели', image: cableSystemsImage2_1 },
+          { title: 'Контрольные кабели', image: cableSystemsImage2_2 },
+          { title: 'Информационные кабели', image: cableSystemsImage2_3 },
+          { title: 'Кабели пожарных систем', image: cableSystemsImage2_4 },
+          { title: 'Оптические линии', image: cableSystemsImage2_5 },
+          { title: 'Маркировка и организация кабельного хозяйства', image: cableSystemsImage2_6 }
         ],
       },
     ],
@@ -161,20 +211,21 @@ export const services: Service[] = [
     slug: 'grounding', 
     title: 'Заземление и молниезащита',
     icon: groundingIcon,
+    heroImage: groundingHeroImage,
     description:
       'Устройство и монтаж систем защиты электроустановок и оборудования.',
     sections: [
       {
         title: 'Работы',
         works: [
-          { title: 'Устройство контура заземления' },
-          { title: 'Монтаж защитного и рабочего заземления' },
-          { title: 'Монтаж системы уравнивания потенциалов' },
-          { title: 'Монтаж заземляющих проводников' },
-          { title: 'Подключение металлических конструкций' },
-          { title: 'Монтаж молниеприёмников и токоотводов' },
-          { title: 'Монтаж заземляющих устройств' },
-          { title: 'Измерение сопротивления заземления' }
+          { title: 'Устройство контура заземления', image: groundingImage1 },
+          { title: 'Монтаж защитного и рабочего заземления', image: groundingImage2 },
+          { title: 'Монтаж системы уравнивания потенциалов', image: groundingImage3 },
+          { title: 'Монтаж заземляющих проводников', image: groundingImage4 },
+          { title: 'Подключение металлических конструкций', image: groundingImage5 },
+          { title: 'Монтаж молниеприёмников и токоотводов', image: groundingImage6 },
+          { title: 'Монтаж заземляющих устройств', image: groundingImage7 },
+          { title: 'Измерение сопротивления заземления', image: groundingImage8 }
         ],
       },
     ],

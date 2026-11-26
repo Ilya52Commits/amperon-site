@@ -1,1 +1,1 @@
-export const ENABLE_SERVICE_LINKS = false;
+export const ENABLE_SERVICE_LINKS = true;
